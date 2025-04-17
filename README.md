@@ -95,7 +95,7 @@ RF: 0.928015 (0.130977)    : Random Forest Classifier
 
 **Feature Importance:**
 
-The moset contributor to the model is theParkinson volatility, followed by the regime indicator derived from the Gaussian Mixture model, then the log absolute gamma exposure value etc The least contributors are the kama market regime indicator and the candle way.
+The top three contributors to the model are the Parkinson volatility, regime indicator derived from the Gaussian Mixture model, and the log absolute gamma exposure value.The least contributors are the kama market regime indicator and the candle way.
 
 ![image](https://github.com/user-attachments/assets/1d0069c8-3253-4f05-b96a-152c2114c8ba)
 
@@ -103,7 +103,7 @@ The moset contributor to the model is theParkinson volatility, followed by the r
 **Hyperparameter Tuning:** 
 
 
-The Random forest was tuned and produced the following model parameters as optimal:
+The Random forest was tuned, which then produced the following model parameters as optimal:
 
 
 Best: 0.930693 using {'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 80}
