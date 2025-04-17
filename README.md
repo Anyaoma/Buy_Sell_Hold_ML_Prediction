@@ -17,9 +17,13 @@ This an ML process that predicts and models the return distribution of the stock
 
 3. Absolute Gamma Exposure value have few negative values present, which in practise in highly unlikely.
    ![image](https://github.com/user-attachments/assets/9afb4989-ebf8-41c0-aba0-791aec4bbff9)
+   ![image](https://github.com/user-attachments/assets/674164f4-880a-4300-8d1d-1d150d9506a5)
+   ![image](https://github.com/user-attachments/assets/8b7a206e-87b5-4d65-9cc0-9994b06f1b19)
 
 
-4. Imbalanced classes after target and feature engineering; The ratio of Hold data points to buy/sell data points was like 8:1
+
+
+5. Imbalanced classes after target and feature engineering; The ratio of Hold data points to buy/sell data points was like 8:1
    
 
 
@@ -85,6 +89,13 @@ CART: 0.938713 (0.138179) : Decision Tree classifier
 RF: 0.928015 (0.130977)    : Random Forest Classifier
 
 ![image](https://github.com/user-attachments/assets/cee94c2c-6525-4966-bf73-95096457e69d)
+
+**Feature Importance:**
+
+The moset contributor to the model is theParkinson volatility, followed by the regime indicator derived from the Gaussian Mixture model, then the log absolute gamma exposure value etc The least contributors are the kama market regime indicator and the candle way.
+
+![image](https://github.com/user-attachments/assets/1d0069c8-3253-4f05-b96a-152c2114c8ba)
+
 
 **Hyperparameter Tuning:** 
 
