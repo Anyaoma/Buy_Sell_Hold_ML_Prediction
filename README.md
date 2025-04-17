@@ -61,7 +61,8 @@ The derived features for the modelling process includes:
 20. the direction or sign of the net gamma exposure.
 
 
-MULTICOLLINEARITY & CORRELATION WITH RESPONSE:
+**Multicollinearity & Correlation with Response:**
+
 ![image](https://github.com/user-attachments/assets/9242bef2-6d0a-4b24-b2df-88c6e25a43df)
 Observed correlation among features is fair. However, features don exhibit very strong linear movement with the response variable
 
@@ -73,21 +74,8 @@ All assets correlation with features:
 **Market Regime Detection: **
 
 The Gaussian mixture model identified 3 regimes: 0,1,2. The QUANTILE VALUES OF REGIME identified are:
-Regime-Specific Thresholds: AAPL
-   regime  buy_threshold  sell_threshold
-0       0       0.005392       -0.005282
-1       1       0.001813       -0.001994
-2       2       0.001517       -0.001397
-Regime-Specific Thresholds: MSFT
-   regime  buy_threshold  sell_threshold
-0       0       0.001759       -0.001598
-1       1       0.004913       -0.004825
-2       2       0.001601       -0.001544
-Regime-Specific Thresholds: SPY
-   regime  buy_threshold  sell_threshold
-0       0       0.001352       -0.001513
-1       1       0.000767       -0.000600
-2       2       0.003706       -0.003306
+![image](https://github.com/user-attachments/assets/2083b669-917a-4a1e-bdc2-62bddbcd1453)
+
 
 
 **MODEL PERFORMANCE DURING CROSS VALIDATION:**
@@ -104,18 +92,5 @@ Best: 0.930693 using {'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 8
 
 
 Model Performance Across Unseen Test set:
-Classification Report:
-              precision    recall  f1-score   support
+![image](https://github.com/user-attachments/assets/36f82f4c-ed8e-461d-8cbd-e5195de66874)
 
-          -1       0.53      0.99      0.69      9464
-           0       1.00      0.86      0.92    119557
-           1       0.48      0.98      0.64      8011
-
-    accuracy                           0.88    137032
-   macro avg       0.67      0.94      0.75    137032
-weighted avg       0.94      0.88      0.89    137032
-
-
-Macro Precision: 0.6691
-Macro Recall: 0.9437
-Macro F1 Score: 0.7526
