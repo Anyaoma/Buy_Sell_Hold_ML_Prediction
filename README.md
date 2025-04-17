@@ -114,3 +114,14 @@ Best: 0.930693 using {'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 8
 
 ![image](https://github.com/user-attachments/assets/36f82f4c-ed8e-461d-8cbd-e5195de66874)
 
+High Recall for Buy/Sell:
+
+The model is successfully identifying most Buy and Sell signals — which is crucial if you're using it to avoid missing trades.
+
+Precision for Hold is 1.00:
+
+It’s extremely accurate when it says "Hold", meaning it doesn’t mistakenly tell you to stay out of trades that are actually good.
+
+Overall Macro F1 of 0.75:
+
+For a 3-class imbalanced classification problem? That’s very strong.
