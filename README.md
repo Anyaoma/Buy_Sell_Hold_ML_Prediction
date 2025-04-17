@@ -64,14 +64,14 @@ The derived features for the modelling process includes:
 **Multicollinearity & Correlation with Response:**
 
 ![image](https://github.com/user-attachments/assets/9242bef2-6d0a-4b24-b2df-88c6e25a43df)
-Observed correlation among features is fair. However, features don exhibit very strong linear movement with the response variable
+Observed correlation among features is fair. However, features dont exhibit very strong linear movement with the response variable
 
 All assets correlation with features:
 ![image](https://github.com/user-attachments/assets/31f4fcb9-c852-47fa-a997-e7f55a8c129d)
 
 
 
-**Market Regime Detection: **
+**Market Regime Detection:**
 
 The Gaussian mixture model identified 3 regimes: 0,1,2. The QUANTILE VALUES OF REGIME identified are:
 ![image](https://github.com/user-attachments/assets/2083b669-917a-4a1e-bdc2-62bddbcd1453)
@@ -79,6 +79,7 @@ The Gaussian mixture model identified 3 regimes: 0,1,2. The QUANTILE VALUES OF R
 
 
 **MODEL PERFORMANCE DURING CROSS VALIDATION:**
+
 LR: 0.840966 (0.094231) :Linear Regression
 CART: 0.938713 (0.138179) : Decision Tree classifier
 RF: 0.928015 (0.130977)    : Random Forest Classifier
