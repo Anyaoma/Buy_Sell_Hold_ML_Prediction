@@ -11,9 +11,11 @@ This an ML process that predicts and models the return distribution of the stock
 ![image](https://github.com/user-attachments/assets/b2a00753-3870-4492-ad35-0619da374113)
 ![image](https://github.com/user-attachments/assets/ab0a0bfd-e7bf-4cf2-ad25-bf67856712a0)
 ![image](https://github.com/user-attachments/assets/adc02743-f079-44d0-a17e-6b7583c579aa)
+![image](https://github.com/user-attachments/assets/1654c8fb-2a72-4c31-8224-9e6848b3f86f)
 
 
-2. Absolute Gamma Exposure value have few negative values present, which in practise in highly unlikely.
+
+3. Absolute Gamma Exposure value have few negative values present, which in practise in highly unlikely.
    ![image](https://github.com/user-attachments/assets/9afb4989-ebf8-41c0-aba0-791aec4bbff9)
 
 
@@ -38,4 +40,82 @@ The label of the prediction is based on the quantile values within identified re
 
 The derived features for the modelling process includes:
 1. Log of close price:
-2. 
+2. Past 10 periods return
+3. Rolling standard deviation
+4. candle way:
+5. Relative difference between the past 10 & 30 periods Rate of change
+6. Relative Difference between the past 10 & 30 periods momentum
+7. stochastic Oscilator
+8. smoothed stochatic oscilator
+9. Relative Difference between the past 10 & 30 periods stochastic oscilator
+10. Relative Difference between the past 10 & 30 periods smoothed stochastic oscilator
+11. Kama moving average
+12. kama market regime indicator
+13. Relativs stochastic index (RSI)
+14. log of absolute gamma exposure
+15. log of net gamma exposure
+16. Parkinson volatility
+17. Relative Difference between the past 10 & 30 periods parkinson volatility
+18. Relative Difference between the past 10 & 30 periods closed net gamma exposure
+19. Relative Difference between the past 10 & 30 periods closed absolute gamma exposure
+20. the direction or sign of the net gamma exposure.
+
+
+MULTICOLLINEARITY & CORRELATION WITH RESPONSE:
+![image](https://github.com/user-attachments/assets/9242bef2-6d0a-4b24-b2df-88c6e25a43df)
+Observed correlation among features is fair. However, features don exhibit very strong linear movement with the response variable
+
+All assets correlation with features:
+![image](https://github.com/user-attachments/assets/31f4fcb9-c852-47fa-a997-e7f55a8c129d)
+
+
+
+**Market Regime Detection: **
+
+The Gaussian mixture model identified 3 regimes: 0,1,2. The QUANTILE VALUES OF REGIME identified are:
+Regime-Specific Thresholds: AAPL
+   regime  buy_threshold  sell_threshold
+0       0       0.005392       -0.005282
+1       1       0.001813       -0.001994
+2       2       0.001517       -0.001397
+Regime-Specific Thresholds: MSFT
+   regime  buy_threshold  sell_threshold
+0       0       0.001759       -0.001598
+1       1       0.004913       -0.004825
+2       2       0.001601       -0.001544
+Regime-Specific Thresholds: SPY
+   regime  buy_threshold  sell_threshold
+0       0       0.001352       -0.001513
+1       1       0.000767       -0.000600
+2       2       0.003706       -0.003306
+
+
+**MODEL PERFORMANCE DURING CROSS VALIDATION:**
+LR: 0.840966 (0.094231) :Linear Regression
+CART: 0.938713 (0.138179) : Decision Tree classifier
+RF: 0.928015 (0.130977)    : Random Forest Classifier
+
+![image](https://github.com/user-attachments/assets/cee94c2c-6525-4966-bf73-95096457e69d)
+
+**Hyperparameter Tuning:** 
+
+The Random forest was tuned and produced the following model parameters as optimal:
+Best: 0.930693 using {'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 80}
+
+
+Model Performance Across Unseen Test set:
+Classification Report:
+              precision    recall  f1-score   support
+
+          -1       0.53      0.99      0.69      9464
+           0       1.00      0.86      0.92    119557
+           1       0.48      0.98      0.64      8011
+
+    accuracy                           0.88    137032
+   macro avg       0.67      0.94      0.75    137032
+weighted avg       0.94      0.88      0.89    137032
+
+
+Macro Precision: 0.6691
+Macro Recall: 0.9437
+Macro F1 Score: 0.7526
