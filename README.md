@@ -85,7 +85,9 @@ The Gaussian mixture model identified 3 regimes: 0,1,2. The QUANTILE VALUES OF R
 **MODEL PERFORMANCE DURING CROSS VALIDATION:**
 
 LR: 0.840966 (0.094231) :Linear Regression
+
 CART: 0.938713 (0.138179) : Decision Tree classifier
+
 RF: 0.928015 (0.130977)    : Random Forest Classifier
 
 ![image](https://github.com/user-attachments/assets/cee94c2c-6525-4966-bf73-95096457e69d)
@@ -98,6 +100,7 @@ The moset contributor to the model is theParkinson volatility, followed by the r
 
 
 **Hyperparameter Tuning:** 
+
 
 The Random forest was tuned and produced the following model parameters as optimal:
 
