@@ -88,9 +88,13 @@ RF: 0.928015 (0.130977)    : Random Forest Classifier
 **Hyperparameter Tuning:** 
 
 The Random forest was tuned and produced the following model parameters as optimal:
+
+
 Best: 0.930693 using {'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 80}
 
 
 Model Performance Across Unseen Test set:
+
+
 ![image](https://github.com/user-attachments/assets/36f82f4c-ed8e-461d-8cbd-e5195de66874)
 
